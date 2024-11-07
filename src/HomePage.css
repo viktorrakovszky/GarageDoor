@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 60px; /* Space for the top of the sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar when active */
+}
+
+.container {
+    position: relative;
+    height: 400px; /* Adjust based on your needs */
+    overflow: hidden;
+}
+
+.blue-circle {
+    position: absolute;
+    top: 320px; /* Position above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background-color: rgb(20, 200, 235);
+    border-radius: 0 0 100px 100px; /* Half circle */
+}
+
+.door {
+    position: absolute;
+    top: 150px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px; /* Adjust the width */
+    transition: transform 2s ease; /* Smooth door opening */
+    z-index: 2;
+}
+
+.car {
+    position: absolute;
+    bottom: 0; /* Starts at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px; /* Adjust the width */
+    transition: transform 1s ease; /* Smooth car movement */
+    z-index: 1;
+}
+
+/* Animation classes */
+.move-up {
+    transform: translate(-50%, -200px); /* Moves the car up */
+}
+
+.move-upper {
+    transform: translate(-50%, -400px); /* Moves the car up */
+}
+
+.open {
+    transform: translateX(150px); /* Moves the door to the right */
+}
+
+.close {
+    transform: translateX(-200px); /* Moves the door to the right */
+}

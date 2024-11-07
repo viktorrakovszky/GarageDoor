@@ -1,0 +1,20 @@
+.hamburger {
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+.sidebar {
+    display: none; /* Hidden by default */
+    /* Add other styles for your sidebar here */
+}
+
+.sidebar.active {
+    display: block; /* Show sidebar when active */
+}
